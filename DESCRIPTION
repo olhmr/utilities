@@ -1,6 +1,6 @@
 Package: utilities
 Type: Package
-Title: Helpful Utility Functions
+Title: Various Utility Functions
 Version: 0.1.0
 Authors@R: person("Olle", "Hammarström", email = "olle.hammarstrom@gmail.com",
                   role = c("aut", "cre"))
