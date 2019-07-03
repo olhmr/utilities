@@ -31,10 +31,12 @@ test_that("each basic replacement works", {
                c("abc"))
   # Unacceptable leading character
   expect_equal(clean_names(c("1abc")),
-               c(".abc"))
+               c("x1abc"))
+  expect_equal(clean_names(c("@a")),
+               c("x.a"))
 })
 test_that("multiple underscores are reduced to one", {
-  expect_equal(clean_names(c("a___")), "a_")
+  expect_equal(clean_names(c("a___b")), "a_b")
   expect_equal(clean_names(c("and___and_and__and___and")), "and_and_and_and_and")
 })
 test_that("an underscore is added before percent where appropriate", {

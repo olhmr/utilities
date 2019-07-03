@@ -33,9 +33,14 @@ clean_names <- function(x) {
   namx <- gsub(pattern = "%", replacement = "percent", x = namx)
   # Remove multiple underscores, sometimes arising from & replacement
   namx <- gsub(pattern = "_+", replacement = "_", x = namx)
+  # Remove trailing underscores
+  namx <- gsub(pattern = "_$", replacement = "", x = namx)
 
-  # Lastly, run through make.names to catch anything else
+  # Run through make.names to catch anything else
   namx <- make.names(namx)
+
+  # Change to lowercase
+  namx <- tolower(namx)
 
   # Return based on input type
   if (is.data.frame(x)) {
