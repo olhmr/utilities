@@ -9,8 +9,8 @@
 #' given as either a data frame or a character vector, and the return type will
 #' correspond to the input.
 #'
-#' @param x data frame or character vector
-#' @return Cleaned data frame or character vector
+#' @param x Input. Either a data frame or a character vector.
+#' @return Data frame or character vector, corresponding to input.
 #' @export
 clean_names <- function(x) {
   # Check input type

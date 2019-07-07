@@ -7,10 +7,10 @@
 clean_names(x)
 }
 \arguments{
-\item{x}{data frame or character vector}
+\item{x}{Input. Either a data frame or a character vector.}
 }
 \value{
-Cleaned data frame or character vector
+Data frame or character vector, corresponding to input.
 }
 \description{
 Applies some general formatting and replacements to enforce a naming
